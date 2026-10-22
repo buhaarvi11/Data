@@ -26,10 +26,6 @@ def add_students():
 
     
 
-
-
-      
-
 while True:
      print("\n----student management system----")
      print("\n1.add student")
