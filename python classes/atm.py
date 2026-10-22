@@ -25,7 +25,7 @@ if user_pin==pin:
           
           if amount > 0:
                   if balance > amount:
-                    balance = balance - amount
+                    balance = balance + amount
                     print("amount successfully")
                     print("updated balance:", balance)
                   else:
@@ -38,7 +38,7 @@ if user_pin==pin:
             amount = int(input("Enter deposit:= "))
 
             if amount > 0:
-                  balance = balance + amount
+                  balance = balance - amount
                   print("Deposit successful.")
                   print("updated balance:", balance)
             else:
