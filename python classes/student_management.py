@@ -27,16 +27,16 @@ def add_students():
 
 def view_student():
 
+ if not students:
+    print("no students details found")
+    return
+
  for st in students:
          print("\n Roll No:",st["rollno"])
          print("name:",st["name"])
          print("age:",st["age"])
          print("course:",st["course"])
-
-
-if not students:
-      print("no students details found")
-      return
+      
       
 
 def search_student():
@@ -48,7 +48,8 @@ def search_student():
                   print("\n name:",st["name"])
                   print("\n age:",st["age"])
                   print("\n course:",st["course"])
-               print("student details not found")
+                  return
+      print("students details not found")
 
 
 def delete_student():
@@ -64,11 +65,15 @@ def delete_student():
                 print("student deleted sucessfully")
            else:
                 print("delete cancelled")
-
                 return
-      else:
-       print("student not found")
-              
+   
+      print("student not found")
+
+def update_student():
+
+     rollno=input("enter roll no:=")
+     for st in students:
+          
                
 
                 
@@ -107,7 +112,7 @@ while True:
            delete_student()
  
       elif choice==5:
-           print("update student")
+           update_student()
 
       elif choice==6:
            print("thank you")
