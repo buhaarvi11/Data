@@ -60,31 +60,41 @@ def delete_student():
                 
             choice=input("do you want to delete?(yes/no):= ").lower()
 
-           if choice=="yes":
+            if choice=="yes":
                 students.remove(st)
                 print("student deleted sucessfully")
-           else:
+            else:
                 print("delete cancelled")
-                return
+            return
    
       print("student not found")
 
+
+               
 def update_student():
 
-     rollno=input("enter roll no:=")
-     for st in students:
-          
+    rollno = input("Enter Student Roll No:- ")
+
+    for st in students:
+        if st["rollno"] == rollno:
+            name = input("Enter New Name:-")
+            age = input("Enter New Age:-")
+            course = input("Enter New Course:-")
+            
+            if name:
+                st["name"] = name
+
+            if age:
+                st["age"] = age
+
+            if course:
+                st["course"] = course
+
+            print("Student Details Updated Successfully")
+            return
+
+    print("Student Not Found")    
                
-
-                
-           
-
-
-
-
-
-
-
 
                      
 while True:
